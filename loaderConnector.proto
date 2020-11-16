@@ -1,0 +1,15 @@
+syntax='proto3';
+
+message InputReading{
+  float reading1 = 1;
+  float reading2 = 2;
+}
+
+message OutputReading{
+  float firstOutput = 1;
+  float secondOutput = 2;
+}
+
+service LoaderConnector{
+  rpc ModelLoader(InputReading) returns (OutputReading);
+}
